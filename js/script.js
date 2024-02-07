@@ -48,6 +48,10 @@ function addExpense() {
     var date_val = document.getElementById("date").value;
     var note_val = document.getElementById("note").value;
 
+    if (!category_val || !amount_val || !date_val) {
+        alert("Please fill in all required fields."); // Display a warning message
+        return;
+    }
     // Generate a unique ID for the expense
     const id = expenses.length + 1;
 
